@@ -1,0 +1,93 @@
+/* ========================================= ESTILOS GENERALES DEL NAVBAR ========================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 8%;
+  background: rgba(255, 255, 255, 0.85); /* Fondo blanco translúcido */
+  backdrop-filter: blur(12px); /* Efecto de desenfoque */
+  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-muted); /* Borde inferior sutil #E2E8F0 */
+  transition: var(--transition-smooth);
+}
+
+/* ========================================= ESTILOS DEL LOGO ========================================= */
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.text-cyan {
+  color: var(--accent-color) !important; /* Ahora es Azul Eléctrico */
+}
+
+/* ========================================= ESTILOS DE LOS ENLACES (DESKTOP) ========================================= */
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  color: var(--text-primary); /* Azul Naval #0F172A */
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.navbar-links a:hover {
+  color: var(--accent-color); /* Azul Eléctrico #2563EB */
+}
+
+/* ========================================= BOTÓN HAMBURGUESA (Oculto en PC) ========================================= */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--text-primary); /* Color de la barra en Azul Naval */
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+/* ========================================= MEDIA QUERY: VERSIÓN MÓVIL Y TABLET ========================================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.25rem 5%;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-muted);
+    padding: 2rem 0;
+    text-align: center;
+    gap: 1.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+}

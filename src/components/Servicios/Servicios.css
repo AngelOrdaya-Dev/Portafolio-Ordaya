@@ -1,0 +1,184 @@
+/* ===========================
+   SERVICIOS SECTION
+=========================== */
+
+.servicios-section {
+  background-color: var(--bg-secondary);
+  padding: 96px 0;
+}
+
+.servicios-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Section Title ---- */
+.servicios-section .section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.servicios-section .section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+  max-width: 600px;
+  margin: 0 auto 64px;
+  line-height: 1.7;
+}
+
+/* Decorative accent line under title */
+.servicios-section .section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 999px;
+  margin: 14px auto 0;
+}
+
+/* ---- Grid Layout ---- */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 56px;
+}
+
+/* ---- Service Card ---- */
+.servicio-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  cursor: default;
+}
+
+/* Subtle top accent bar on hover */
+.servicio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), #60a5fa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px 16px 0 0;
+}
+
+.servicio-card:hover::before {
+  transform: scaleX(1);
+}
+
+.servicio-card:hover {
+  border-color: #bfdbfe;
+  box-shadow:
+    0 8px 32px rgba(37, 99, 235, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.06);
+  transform: translateY(-4px);
+}
+
+/* ---- Icon ---- */
+.servicio-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--accent-light);
+  color: var(--accent-color);
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.servicio-card:hover .servicio-icon {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* ---- Body ---- */
+.servicio-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.servicio-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.servicio-desc {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ---- Footer / Tags ---- */
+.servicio-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-muted);
+}
+
+.servicio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.servicio-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background-color: var(--accent-light);
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 4px 12px;
+  letter-spacing: 0.01em;
+  transition: var(--transition-smooth);
+}
+
+.servicio-card:hover .servicio-tag {
+  background-color: #dbeafe;
+}
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+=========================== */
+@media (max-width: 640px) {
+  .servicios-section {
+    padding: 64px 0;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .servicio-card {
+    padding: 28px 20px;
+  }
+}

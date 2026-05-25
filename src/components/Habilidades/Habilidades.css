@@ -1,0 +1,110 @@
+/* ========================================= CONTENEDOR PRINCIPAL ========================================= */
+.habilidades-section {
+  padding: 6rem 8%;
+  background-color: var(--bg-primary); /* Blanco Puro #FFFFFF */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.habilidades-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ========================================= GRID AUTOMÁTICO (Magia Responsive) ========================================= */
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ========================================= TARJETA (Card) ========================================= */
+.skill-card {
+  background-color: var(--bg-secondary); /* Gris Claro #F8F9FA */
+  border: 1px solid var(--border-muted); /* Borde sutil #E2E8F0 */
+  border-radius: 12px;
+  padding: 2rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Efecto al pasar el mouse */
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05), 0 8px 8px -6px rgba(0, 0, 0, 0.02);
+  border-color: #cbd5e1;
+}
+
+/* ========================================= CABECERA (Ícono y Botón) ========================================= */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--accent-color); /* Azul Eléctrico */
+}
+
+/* ========================================= BOTONES / ETIQUETAS SUPERIORES ========================================= */
+.skill-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.2px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: default;
+  transition: var(--transition-smooth);
+}
+
+/* Variante Verde (Certificado) -> Mapped to Soft Electric Blue */
+.badge-green {
+  color: var(--accent-color);
+  background-color: var(--accent-light); /* Fondo azul claro rebajado #EFF6FF */
+  border-color: var(--accent-light);
+}
+
+/* Variante Amarilla (En Proceso) -> Mapped to Soft Amber */
+.badge-yellow {
+  color: #b45309;
+  background-color: #fef3c7; /* Fondo amarillo pastel sutil */
+  border-color: #fef3c7;
+}
+
+/* ========================================= CUERPO DE LA TARJETA (Textos) ========================================= */
+.skill-title {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.25px;
+}
+
+.skill-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  min-height: 50px;
+}
+
+.skill-level {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

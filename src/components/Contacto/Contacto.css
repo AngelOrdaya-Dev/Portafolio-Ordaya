@@ -1,0 +1,180 @@
+/* ========================================= CONTENEDOR PRINCIPAL ========================================= */
+.contacto-section {
+  padding: 6rem 8%;
+  background-color: var(--bg-primary); /* Blanco Puro #FFFFFF */
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto-main-title {
+  color: var(--text-primary); /* Azul Naval #0F172A */
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 4.5rem;
+  text-align: center;
+  letter-spacing: -0.75px;
+}
+
+.contacto-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ========================================= GRID (2 Columnas) ========================================= */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ========================================= COLUMNA IZQUIERDA (Info) ========================================= */
+.info-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.info-desc {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  background-color: var(--accent-light); /* Fondo azul claro rebajado #EFF6FF */
+  border: 1px solid var(--accent-light);
+  color: var(--accent-color); /* Azul Eléctrico #2563EB */
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25px;
+}
+
+.item-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ========================================= COLUMNA DERECHA (Formulario) ========================================= */
+.contacto-form-wrapper {
+  background-color: var(--bg-secondary); /* Gris Claro #F8F9FA */
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-muted); /* Borde sutil #E2E8F0 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Estilos para los campos de entrada */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: var(--bg-primary); /* Entrada en blanco */
+  border: 1px solid var(--border-muted);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+/* Efecto FOCUS (Borde Azul Eléctrico al hacer clic) */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Brillo suave en azul eléctrico */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* ========================================= BOTÓN ENVIAR ========================================= */
+.btn-submit {
+  background-color: var(--accent-color); /* Azul Eléctrico #2563EB */
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.15), 0 2px 4px -1px rgba(37, 99, 235, 0.1);
+  transition: var(--transition-smooth);
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-hover); /* Variante hover #1D4ED8 */
+  transform: translateY(-1px);
+}
+
+/* ========================================= RESPONSIVIDAD (Móviles) ========================================= */
+@media (max-width: 768px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .contacto-main-title {
+    font-size: 1.85rem;
+    margin-bottom: 2.5rem;
+  }
+  .contacto-form-wrapper {
+    padding: 1.75rem;
+  }
+}
