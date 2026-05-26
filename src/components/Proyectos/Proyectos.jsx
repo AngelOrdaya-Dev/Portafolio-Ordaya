@@ -5,7 +5,7 @@ const Proyectos = () => {
   const proyectosData = [
     {
       id: 1,
-      imagen: "/imagen app-citas.jpeg",
+      imagen: import.meta.env.BASE_URL + "imagen app-citas.jpeg",
       titulo: "Sistema de Gestión de Citas – Web App Full-Stack",
       descripcion: "Desarrollo completo Full-Stack con Laravel + MySQL. Implementación de operaciones CRUD, autenticación de usuarios y panel administrativo para automatización de registros de agendamiento.",
       tecnologias: ["Laravel", "MySQL", "PHP", "Bootstrap", "MVC"],
@@ -14,7 +14,7 @@ const Proyectos = () => {
     },
     {
       id: 2,
-      imagen: "/imagen premier-academy.jpeg",
+      imagen: import.meta.env.BASE_URL + "imagen premier-academy.jpeg",
       titulo: "Premier Academy – Plataforma Web Educativa",
       descripcion: "Interfaz web moderna y completamente responsiva para una plataforma educativa interactiva. Implementación de componentes dinámicos enfocados en optimizar la navegación y la experiencia de usuario.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
@@ -23,7 +23,7 @@ const Proyectos = () => {
     },
     {
       id: 3,
-      imagen: "/imagen ach-details.jpeg",
+      imagen: import.meta.env.BASE_URL + "imagen ach-details.jpeg",
       titulo: "ACH Details – E-commerce",
       descripcion: "Plataforma web de comercio electrónico y catálogo digital para ACH Details, un negocio especializado en arreglos florales premium. Despliegue continuo en Netlify y control de versiones con Git/GitHub.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "Netlify", "Git"],
@@ -32,7 +32,7 @@ const Proyectos = () => {
     },
     {
       id: 4,
-      imagen: "/imagen portafolio Angel.jpeg",
+      imagen: import.meta.env.BASE_URL + "imagen portafolio Angel.jpeg",
       titulo: "Portafolio Profesional React",
       descripcion: "Diseño y desarrollo de este sitio web de presentación personal. Estructurado con componentes modulares de React, estados para la interacción responsive de móviles y animaciones CSS de alto rendimiento.",
       tecnologias: ["React", "Vite", "JavaScript", "CSS3", "Responsive"],
