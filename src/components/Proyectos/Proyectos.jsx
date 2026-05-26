@@ -5,39 +5,39 @@ const Proyectos = () => {
   const proyectosData = [
     {
       id: 1,
-      imagen: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
+      imagen: "/imagen app-citas.jpeg",
       titulo: "Sistema de Gestión de Citas – Web App Full-Stack",
       descripcion: "Desarrollo completo Full-Stack con Laravel + MySQL. Implementación de operaciones CRUD, autenticación de usuarios y panel administrativo para automatización de registros de agendamiento.",
       tecnologias: ["Laravel", "MySQL", "PHP", "Bootstrap", "MVC"],
       linkDemo: "https://gestion-citas.free.nf/?i=1",
-      linkCodigo: "#"
+      linkCodigo: "https://github.com/Vrak23/app-gestion-citas/tree/angel-rama"
     },
     {
       id: 2,
-      imagen: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      imagen: "/imagen premier-academy.jpeg",
       titulo: "Premier Academy – Plataforma Web Educativa",
       descripcion: "Interfaz web moderna y completamente responsiva para una plataforma educativa interactiva. Implementación de componentes dinámicos enfocados en optimizar la navegación y la experiencia de usuario.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
       linkDemo: "https://premier-academy.infinityfreeapp.com",
-      linkCodigo: "#"
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/App_Login"
     },
     {
       id: 3,
-      imagen: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      titulo: "ACH Details / ECOCREATIONS S.A.C. – E-commerce",
-      descripcion: "Aplicación de comercio electrónico con catálogo de productos. Implementación de autenticación social con OAuth (Facebook y GitHub), despliegue continuo en Netlify y control de versiones con Git/GitHub.",
-      tecnologias: ["React", "JavaScript", "OAuth", "Netlify", "Git"],
+      imagen: "/imagen ach-details.jpeg",
+      titulo: "ACH Details – E-commerce",
+      descripcion: "Plataforma web de comercio electrónico y catálogo digital para ACH Details, un negocio especializado en arreglos florales premium. Despliegue continuo en Netlify y control de versiones con Git/GitHub.",
+      tecnologias: ["HTML5", "CSS3", "JavaScript", "Netlify", "Git"],
       linkDemo: "https://ach-details-lima.netlify.app/?v=2",
-      linkCodigo: "#"
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/ACH-details"
     },
     {
       id: 4,
-      imagen: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+      imagen: "/imagen portafolio Angel.jpeg",
       titulo: "Portafolio Profesional React",
       descripcion: "Diseño y desarrollo de este sitio web de presentación personal. Estructurado con componentes modulares de React, estados para la interacción responsive de móviles y animaciones CSS de alto rendimiento.",
       tecnologias: ["React", "Vite", "JavaScript", "CSS3", "Responsive"],
-      linkDemo: "#",
-      linkCodigo: "#"
+      linkDemo: "https://portafolio-ordaya.vercel.app/",
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/Portafolio-Ordaya"
     }
   ];
 

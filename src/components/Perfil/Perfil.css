@@ -74,13 +74,13 @@
 }
 
 /* ========================================= LÍNEA DE TIEMPO (Educación) ========================================= */
-.timeline {
+.perfil-timeline {
   display: flex;
   flex-direction: column;
   gap: 2.25rem; /* Aumentado de 1.75rem a 2.25rem */
 }
 
-.timeline-item {
+.perfil-timeline-item {
   position: relative;
   padding-left: 2rem; /* Aumentado de 1.5rem a 2rem para dar más aire lateral */
   border-left: 2px solid var(--border-muted);
@@ -90,7 +90,7 @@
 }
 
 /* El punto en la línea de tiempo */
-.timeline-item::before {
+.perfil-timeline-item::before {
   content: '';
   position: absolute;
   left: -6px; /* Ajustado para el nuevo grosor */
@@ -102,7 +102,7 @@
   border-radius: 50%;
 }
 
-.timeline-header {
+.perfil-timeline-header {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Cambiado de flex-start a center */
@@ -111,14 +111,14 @@
   gap: 0.75rem; /* Aumentado de 0.5rem a 0.75rem */
 }
 
-.timeline-header h4 {
+.perfil-timeline-header h4 {
   font-size: 1.05rem;
   color: var(--text-primary);
   font-weight: 700;
   line-height: 1.4;
 }
 
-.timeline-date {
+.perfil-timeline-date {
   font-size: 0.875rem; /* Aumentado de 0.85rem a 0.875rem */
   color: var(--text-secondary);
   font-weight: 500;

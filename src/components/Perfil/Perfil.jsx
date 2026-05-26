@@ -39,46 +39,54 @@ const Perfil = () => {
               </div>
               <h3>Educación & Formación</h3>
             </div>
-            <div className="timeline">
+            <div className="perfil-timeline">
               {/* Ítem de Educación 1 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
                   <h4>Informática y Desarrollo de Web</h4>
                   <span className="badge badge-outline">En Curso</span>
                 </div>
-                <span className="timeline-date">SENATI | 4to Ciclo (2026 - Actualidad)</span>
+                <span className="perfil-timeline-date">SENATI | 4to Ciclo (2026 - Actualidad)</span>
               </div>
               {/* Ítem de Certificación 1 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
                   <h4>BIG School</h4>
                   <span className="badge badge-solid">Certificación IA</span>
                 </div>
-                <span className="timeline-date">Desarrollo con IA, Data Science, Machine Learning, Ciberseguridad & Hacking Ético (2026)</span>
+                <span className="perfil-timeline-date">Desarrollo con IA, Data Science, Machine Learning, Ciberseguridad & Hacking Ético (2026)</span>
               </div>
               {/* Ítem de Certificación 2 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
                   <h4>Cisco Networking Academy</h4>
                   <span className="badge badge-outline">Cisco Academy</span>
                 </div>
-                <span className="timeline-date">Networking, Hardware, Cybersecurity Essentials, IoT & Digital Transformation</span>
+                <span className="perfil-timeline-date">Networking, Hardware, Cybersecurity Essentials, IoT & Digital Transformation</span>
               </div>
               {/* Ítem de Certificación 3 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
                   <h4>Formación Complementaria</h4>
                   <span className="badge badge-outline">Otros</span>
                 </div>
-                <span className="timeline-date">Fundación Romero (Modelo Canvas) | Excel Avanzado (Semana Excel Imparable)</span>
+                <span className="perfil-timeline-date">Fundación Romero (Modelo Canvas) | Excel Avanzado (Semana Excel Imparable)</span>
               </div>
               {/* Ítem de Educación 2 */}
-              <div className="timeline-item">
-                <div className="timeline-header">
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
                   <h4>Educación Secundaria</h4>
                   <span className="badge badge-outline">Egresado</span>
                 </div>
-                <span className="timeline-date">I.E. 3051 "El Milagro" (2017 - 2021)</span>
+                <span className="perfil-timeline-date">I.E. 3051 "El Milagro" (2017 - 2021)</span>
+              </div>
+              {/* Ítem de Educación 3 */}
+              <div className="perfil-timeline-item">
+                <div className="perfil-timeline-header">
+                  <h4>Educación Primaria</h4>
+                  <span className="badge badge-outline">Egresado</span>
+                </div>
+                <span className="perfil-timeline-date">I.E. 3053 "Virgen del Carmen" (2010 - 2016)</span>
               </div>
             </div>
           </div>

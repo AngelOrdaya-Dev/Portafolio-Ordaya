@@ -2,28 +2,50 @@ import { useState } from 'react';
 import './Contacto.css';
 
 const Contacto = () => {
-  // Estado centralizado para el formulario (Formulario Controlado)
   const [formulario, setFormulario] = useState({ nombre: '', email: '', mensaje: '' });
+  const [estadoEnvio, setEstadoEnvio] = useState(null); // null, 'enviando', 'exito', 'error'
 
-  // Función para manejar los cambios en los inputs
   const manejarCambio = (e) => {
     const { name, value } = e.target;
+    // Mapeamos los nombres del input para actualizar el estado correctamente
+    const campoEstado = name === 'name' ? 'nombre' : name === 'message' ? 'mensaje' : name;
+
     setFormulario({
       ...formulario,
-      [name]: value
+      [campoEstado]: value
     });
   };
 
-  // Función para simular el envío
-  const manejarEnvio = (e) => {
+  const manejarEnvio = async (e) => {
     e.preventDefault();
-    alert(`¡Gracias por tu mensaje, ${formulario.nombre}! Te contactaré pronto.`);
-    // Limpiamos el formulario después de enviar
-    setFormulario({
-      nombre: '',
-      email: '',
-      mensaje: ''
-    });
+    setEstadoEnvio('enviando');
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwvzrzqd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formulario.nombre,
+          email: formulario.email,
+          message: formulario.mensaje
+        })
+      });
+
+      if (response.ok) {
+        setEstadoEnvio('exito');
+        setFormulario({ nombre: '', email: '', mensaje: '' });
+        setTimeout(() => setEstadoEnvio(null), 5000);
+      } else {
+        setEstadoEnvio('error');
+        setTimeout(() => setEstadoEnvio(null), 5000);
+      }
+    } catch (error) {
+      setEstadoEnvio('error');
+      setTimeout(() => setEstadoEnvio(null), 5000);
+    }
   };
 
   return (
@@ -81,10 +103,15 @@ const Contacto = () => {
 
           {/* ===================================== COLUMNA DERECHA: FORMULARIO ====================================== */}
           <div className="contacto-form-wrapper">
-            <form onSubmit={manejarEnvio} className="contacto-form">
+            <form
+              action="https://formspree.io/f/xwvzrzqd"
+              method="POST"
+              onSubmit={manejarEnvio}
+              className="contacto-form"
+            >
               <div className="form-group">
                 <label htmlFor="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" value={formulario.nombre} onChange={manejarCambio} placeholder="Tu nombre" required />
+                <input type="text" id="nombre" name="name" value={formulario.nombre} onChange={manejarCambio} placeholder="Tu nombre" required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
@@ -92,9 +119,21 @@ const Contacto = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" value={formulario.mensaje} onChange={manejarCambio} placeholder="Cuéntame sobre tu proyecto..." rows="5" required ></textarea>
+                <textarea id="mensaje" name="message" value={formulario.mensaje} onChange={manejarCambio} placeholder="Cuéntame sobre tu proyecto..." rows="5" required ></textarea>
               </div>
-              <button type="submit" className="btn-submit">Enviar Mensaje</button>
+              <button type="submit" className="btn-submit" disabled={estadoEnvio === 'enviando'}>
+                {estadoEnvio === 'enviando' ? 'Enviando...' : 'Enviar Mensaje'}
+              </button>
+              {estadoEnvio === 'exito' && (
+                <p style={{ color: '#10b981', marginTop: '12px', fontSize: '0.9rem', textAlign: 'center', fontWeight: '500' }}>
+                  ¡Mensaje enviado con éxito!
+                </p>
+              )}
+              {estadoEnvio === 'error' && (
+                <p style={{ color: '#ef4444', marginTop: '12px', fontSize: '0.9rem', textAlign: 'center', fontWeight: '500' }}>
+                  Hubo un error al enviar. Por favor, inténtalo de nuevo.
+                </p>
+              )}
             </form>
           </div>
         </div>
