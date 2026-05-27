@@ -23,9 +23,10 @@ const Contacto = () => {
 
     try {
       const templateParams = {
-        from_name: formulario.nombre,
-        from_email: formulario.email,
-        message: formulario.mensaje,
+        nombre: formulario.nombre,
+        email: formulario.email,
+        mensaje: formulario.mensaje,
+        reply_to: formulario.email,
       };
       const result = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
