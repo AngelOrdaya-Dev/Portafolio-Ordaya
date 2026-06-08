@@ -38,6 +38,36 @@ const Proyectos = () => {
       tecnologias: ["React", "Vite", "JavaScript", "CSS3", "Responsive"],
       linkDemo: "https://portafolio-ordaya.vercel.app/",
       linkCodigo: "https://github.com/AngelOrdaya-Dev/Portafolio-Ordaya"
+    },
+    {
+      id: 5,
+      imagen: import.meta.env.BASE_URL + "imagen vende-facil.png",
+      titulo: "Vende-Fácil",
+      descripcion: "Sistema informático de gestión de ventas y control de inventario enfocado en simplificar las operaciones comerciales de pequeños negocios.",
+      tecnologias: ["Java", "MySQL", "Desktop"],
+      linkDemo: null,
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/Vende-Facil"
+    },
+    {
+      id: 6,
+      imagen: import.meta.env.BASE_URL + "imagen inventario-web.png",
+      titulo: "Inventario Web",
+      descripcion: "Aplicación web enfocada en el control y administración de inventarios, facilitando el seguimiento de existencias en tiempo real.",
+      tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+      linkDemo: null,
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/Inventario-web"
+    },
+    {
+      id: 7,
+      imagen: import.meta.env.BASE_URL + "imagen proyecto-react.png",
+      titulo: "Sistema Escolar (React + API)",
+      descripcion: "Plataforma de gestión escolar completa, dividida en dos repositorios: un Frontend dinámico construido con React y un Backend robusto (API REST).",
+      tecnologias: ["React", "Node.js", "API REST", "Vite"],
+      linkDemo: null,
+      linkCodigo: [
+        { label: "Frontend", url: "https://github.com/AngelOrdaya-Dev/Proyecto-React-" },
+        { label: "Backend", url: "https://github.com/AngelOrdaya-Dev/api_escuela" }
+      ]
     }
   ];
 
@@ -66,20 +96,33 @@ const Proyectos = () => {
                 </div>
                 {/* 4. Botones de Acción */}
                 <div className="proyecto-links">
-                  <a href={proyecto.linkDemo} target="_blank" rel="noopener noreferrer" className="btn-proyecto btn-demo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    Ver Proyecto
-                  </a>
-                  <a href={proyecto.linkCodigo} target="_blank" rel="noopener noreferrer" className="btn-proyecto btn-codigo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                    Ver Código
-                  </a>
+                  {proyecto.linkDemo && (
+                    <a href={proyecto.linkDemo} target="_blank" rel="noopener noreferrer" className="btn-proyecto btn-demo">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                      Ver Proyecto
+                    </a>
+                  )}
+                  {Array.isArray(proyecto.linkCodigo) ? (
+                    proyecto.linkCodigo.map((link, idx) => (
+                      <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="btn-proyecto btn-codigo">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        {link.label}
+                      </a>
+                    ))
+                  ) : (
+                    <a href={proyecto.linkCodigo} target="_blank" rel="noopener noreferrer" className="btn-proyecto btn-codigo">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                      </svg>
+                      Ver Código
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
