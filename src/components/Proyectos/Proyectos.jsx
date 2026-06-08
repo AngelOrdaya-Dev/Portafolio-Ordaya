@@ -45,7 +45,7 @@ const Proyectos = () => {
       titulo: "Vende-Fácil",
       descripcion: "Sistema informático de gestión de ventas y control de inventario enfocado en simplificar las operaciones comerciales de pequeños negocios.",
       tecnologias: ["Java", "MySQL", "Desktop"],
-      linkDemo: null,
+      linkDemo: "https://web-production-32d3b.up.railway.app/",
       linkCodigo: "https://github.com/AngelOrdaya-Dev/Vende-Facil"
     },
     {
@@ -54,7 +54,7 @@ const Proyectos = () => {
       titulo: "Inventario Web",
       descripcion: "Aplicación web enfocada en el control y administración de inventarios, facilitando el seguimiento de existencias en tiempo real.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
-      linkDemo: null,
+      linkDemo: "https://inventario-web-angel.vercel.app/",
       linkCodigo: "https://github.com/AngelOrdaya-Dev/Inventario-web"
     },
     {
@@ -63,7 +63,7 @@ const Proyectos = () => {
       titulo: "Sistema Escolar (React + API)",
       descripcion: "Plataforma de gestión escolar completa, dividida en dos repositorios: un Frontend dinámico construido con React y un Backend robusto (API REST).",
       tecnologias: ["React", "Node.js", "API REST", "Vite"],
-      linkDemo: null,
+      linkDemo: "https://proyecto-react-angel.vercel.app/",
       linkCodigo: [
         { label: "Frontend", url: "https://github.com/AngelOrdaya-Dev/Proyecto-React-" },
         { label: "Backend", url: "https://github.com/AngelOrdaya-Dev/api_escuela" }
