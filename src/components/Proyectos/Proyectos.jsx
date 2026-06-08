@@ -41,7 +41,7 @@ const Proyectos = () => {
     },
     {
       id: 5,
-      imagen: import.meta.env.BASE_URL + "imagen vende-facil.png",
+      imagen: import.meta.env.BASE_URL + "imagen-vende-facil.png",
       titulo: "Vende-Fácil",
       descripcion: "Sistema informático de gestión de ventas y control de inventario enfocado en simplificar las operaciones comerciales de pequeños negocios.",
       tecnologias: ["Java", "MySQL", "Desktop"],
@@ -50,7 +50,7 @@ const Proyectos = () => {
     },
     {
       id: 6,
-      imagen: import.meta.env.BASE_URL + "imagen inventario-web.png",
+      imagen: import.meta.env.BASE_URL + "imagen-inventario-web.png",
       titulo: "Inventario Web",
       descripcion: "Aplicación web enfocada en el control y administración de inventarios, facilitando el seguimiento de existencias en tiempo real.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
@@ -59,7 +59,7 @@ const Proyectos = () => {
     },
     {
       id: 7,
-      imagen: import.meta.env.BASE_URL + "imagen proyecto-react.png",
+      imagen: import.meta.env.BASE_URL + "imagen-proyecto-react.png",
       titulo: "Sistema Escolar (React + API)",
       descripcion: "Plataforma de gestión escolar completa, dividida en dos repositorios: un Frontend dinámico construido con React y un Backend robusto (API REST).",
       tecnologias: ["React", "Node.js", "API REST", "Vite"],
