@@ -68,6 +68,15 @@ const Proyectos = () => {
         { label: "Frontend", url: "https://github.com/AngelOrdaya-Dev/Proyecto-React-" },
         { label: "Backend", url: "https://github.com/AngelOrdaya-Dev/api_escuela" }
       ]
+    },
+    {
+      id: 8,
+      imagen: import.meta.env.BASE_URL + "imagen-starbucks-peru.jpeg",
+      titulo: "Starbucks Perú – Landing Page Interactiva",
+      descripcion: "Landing page premium para Starbucks Perú con diseño inmersivo, animaciones fluidas con Framer Motion, navegación dinámica y secciones interactivas de menú. Desplegada en Vercel con rendimiento optimizado.",
+      tecnologias: ["React", "Vite", "Framer Motion", "CSS3", "Vercel"],
+      linkDemo: "https://starbucks-peru.vercel.app/",
+      linkCodigo: "https://github.com/AngelOrdaya-Dev/Starbucks-Peru"
     }
   ];
 
