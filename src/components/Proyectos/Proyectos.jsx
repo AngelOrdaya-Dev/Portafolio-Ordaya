@@ -18,7 +18,7 @@ const Proyectos = () => {
       titulo: "Premier Academy – Plataforma Web Educativa",
       descripcion: "Interfaz web moderna y completamente responsiva para una plataforma educativa interactiva. Implementación de componentes dinámicos enfocados en optimizar la navegación y la experiencia de usuario.",
       tecnologias: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
-      linkDemo: "https://premier-academy.infinityfreeapp.com",
+      linkDemo: "https://app-login-premier-xdangel.onrender.com/",
       linkCodigo: "https://github.com/AngelOrdaya-Dev/App_Login"
     },
     {
@@ -72,7 +72,7 @@ const Proyectos = () => {
     {
       id: 8,
       imagen: import.meta.env.BASE_URL + "imagen-starbucks-peru.jpeg",
-      titulo: "Starbucks Perú – Landing Page Interactiva",
+      titulo: "Starbucks Perú Landing Page Interactiva",
       descripcion: "Landing page premium para Starbucks Perú con diseño inmersivo, animaciones fluidas con Framer Motion, navegación dinámica y secciones interactivas de menú. Desplegada en Vercel con rendimiento optimizado.",
       tecnologias: ["React", "Vite", "Framer Motion", "CSS3", "Vercel"],
       linkDemo: "https://starbucks-peru.vercel.app/",
